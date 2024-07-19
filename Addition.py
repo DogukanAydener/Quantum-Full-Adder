@@ -6,6 +6,11 @@ from qiskit.visualization import plot_histogram
 
 
 
+print("##########  Addition Calculator  ##########")
+print("")
+print("")
+print("Enter the decimal values you want to add;")
+
 # Function to convert a decimal number to binary
 def decimal_to_binary(decimal_value):
     return bin(decimal_value)[2:]
@@ -23,10 +28,10 @@ max_length = max(len(x), len(y))
 x = x.zfill(max_length)
 y = y.zfill(max_length)
 
-print("##############################################")
-print(f"Binary representation of {decimal1} is {x}")
-print(f"Binary representation of {decimal2} is {y}")
-print("##############################################")
+print("")
+print(f"Binary representation of first decimal ({decimal1}) is {x}")
+print(f"Binary representation of second decimal ({decimal2}) is {y}")
+print("")
 
 
 print(f"Calculation: \n {decimal1} + {decimal2}")
@@ -133,7 +138,6 @@ from qiskit_aer import AerSimulator
 result = AerSimulator().run(qc).result()
 stats = result.get_counts()
 
-print(stats)
 
 
 p = input("Show histogram (y/n): ")
@@ -156,4 +160,15 @@ binary_number = list(stats.keys())[0]
 decimal_value = binary_to_decimal(binary_number)
 
 # Print the decimal value
-print(f"Decimal value of binary {binary_number} is: {decimal_value}")
+#print(f"Decimal value of binary {binary_number} is: {decimal_value}")
+
+print("")
+print("")
+
+print(f"Result in terms of binary;\n {x} + {y} = {binary_number}")
+print("")
+print(f"Result in decimal; \n {decimal1} + {decimal2} = {decimal_value}")
+
+
+
+
