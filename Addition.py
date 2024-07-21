@@ -2,6 +2,10 @@
 
 from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
 from qiskit.visualization import plot_histogram
+from IPython.display import display
+import matplotlib.pyplot as plt
+
+
 
 
 
@@ -124,9 +128,14 @@ for i in range(n+1):
 
 
 d = input("Show circuit (y/n)")
+plt.ioff()
 
 if d == "y":
-    display(qc.draw("mpl"))
+    fig, ax = plt.subplots(figsize=(10, 5)) 
+    qc.draw("mpl", ax=ax)
+    plt.show()
+
+    
 else:
     pass
 
@@ -143,7 +152,10 @@ stats = result.get_counts()
 p = input("Show histogram (y/n): ")
 
 if p == "y":
-    display(plot_histogram(stats))
+    fig, ax = plt.subplots(figsize=(5, 5)) 
+    plot_histogram(stats, ax=ax)
+    plt.show()
+    
 else:
     pass
 
