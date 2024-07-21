@@ -58,13 +58,11 @@ while True:
     A = QuantumRegister(n, 'A')
     B = QuantumRegister(n , 'B')
 
-    S = QuantumRegister(n , 'Sum')
     C = QuantumRegister(n , 'Carry')
-    R = QuantumRegister(n+1 , 'Result')
 
     Ans = ClassicalRegister(n+1 ,'Answer')
 
-    qc = QuantumCircuit(A,B,S,C,R,Ans)
+    qc = QuantumCircuit(A,B,C,Ans)
 
 
 
@@ -82,51 +80,36 @@ while True:
             qc.x(B[i])
 
 
-
-
-
-    qc.barrier()
-
-    #Add A[n] and B[n] values and copy them in S[n] (Sum) register
-
-    for i in range(n):
-        qc.cx(A[i],S[i])
-        qc.cx(B[i],S[i])
-
-
-    qc.barrier()
-
     #checks if both A[n] and B[n] are '1' and copy result on C[n] (carry) register
-
 
     for i in range(n):
         qc.ccx(A[i],B[i],C[i])
 
 
+    qc.barrier()
+
+
+
+    for i in range(n):
+        qc.cx(A[i],B[i])
+
 
     qc.barrier()
 
-    #apply sum to result
-    for i in range(n):
-        qc.cx(S[i],R[i+1])
-
-
-    #carry modification
     for i in range(n-1):
-        qc.ccx(R[n-1-i],C[n-1-i],C[n-2-i])
-
-    #modified carry to result
-    for i in range(n):
-        qc.cx(C[i],R[i])
+        qc.ccx(C[n-1-i],B[n-2-i],C[n-2-i])
 
 
+    for i in range(n-1):
+        qc.cx(C[n-1-i],B[n-2-i])
 
     qc.barrier()
 
 
-    for i in range(n+1):
-        qc.measure(R[n-i],Ans[i])
+    qc.measure(C[0],Ans[n])
 
+    for i in range(n):
+        qc.measure(B[i],Ans[n-1-i])
 
 
     d = input("Show circuit (y/n): ")
