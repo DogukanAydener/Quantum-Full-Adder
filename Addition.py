@@ -1,6 +1,7 @@
 #import required libarries
 
 from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
+from qiskit_aer import AerSimulator
 from qiskit.visualization import plot_histogram
 from IPython.display import display
 import matplotlib.pyplot as plt
@@ -132,16 +133,13 @@ while True:
 
     if d == "y":
         fig, ax = plt.subplots(figsize=(10, 5)) 
-        qc.draw("mpl", ax=ax)
+        qc.draw("mpl", ax=ax , fold=-1)
         plt.show()
 
         
     else:
         pass
 
-
-
-    from qiskit_aer import AerSimulator
 
 
     result = AerSimulator().run(qc).result()
