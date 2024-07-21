@@ -128,7 +128,6 @@ for i in range(n+1):
 
 
 d = input("Show circuit (y/n)")
-plt.ioff()
 
 if d == "y":
     fig, ax = plt.subplots(figsize=(10, 5)) 
