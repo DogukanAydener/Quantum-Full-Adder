@@ -1,6 +1,6 @@
 # Quantum Full Adder
 
-This repository contains a quantum full adder implemented using Qiskit. A full adder is a digital circuit that performs addition of binary numbers. In this implementation, the addition is performed using quantum gates on a quantum computer simulator.
+This repository contains a quantum full adder implemented using Qiskit. Quantum full adder is a quantum circuit that performs addition of binary numbers. In this implementation, the addition is performed using quantum gates on a quantum computer simulator.
 
 ## Overview
 
@@ -12,7 +12,7 @@ The quantum full adder takes two decimal numbers as input, converts them to bina
 - Constructs a quantum circuit to perform binary addition
 - Measures and displays the result in both binary and decimal formats
 - Optional visualization of the quantum circuit and histogram of results
-- Supports explicit analysis of 2-bit, 3-bit, and 4-bit additions
+
 
 ## Installation
 !!!! May added later !!!
@@ -50,8 +50,17 @@ For simple usage, you can run the addition_app.bat file, which will execute the 
 addition_app.bat
 ```
 
- ### Analyzing Specified Bit Additions
-The repository also includes a file named Specified addition for explicitly analyzing 2-bit, 3-bit, and 4-bit additions. You can refer to this file to see specific examples and understand how the quantum full adder handles different bit lengths.
+### Analyzing Specified Bit Additions
+The repository also includes a file named "Specified addition" for explicitly analyzing 2-bit, 3-bit, and 4-bit additions. You can refer to this file to see specific examples and understand how the quantum full adder handles different bit lengths.
+
+## Memory Requirements
+
+- For inputs up to **511**, you need **16GB (16128M)** of RAM.
+- For inputs between **512** and **1023**, you need exactly **16GB (16384MB)** of RAM.
+- For inputs between **1024** and **2047**, you need **128GB** of RAM.
+- For inputs over **2048**, you need **1TB** of RAM...
+
+
 
 ## Contact
 For questions or support, please open an issue in the repository or contact the maintainer.
@@ -64,7 +73,7 @@ For questions or support, please open an issue in the repository or contact the 
 This project demonstrates the application of quantum computing in performing arithmetic operations. For more information on quantum computing and Qiskit, check out the following resources:
 
 - [Qiskit Documentation](https://qiskit.org/documentation/)
-- [Quantum Computing: An Introduction](https://quantum-computing.ibm.com/)
+- [IBM Quantum Platform](https://quantum.ibm.com/)
 
 
 ## Note on Qiskit Versions
