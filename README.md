@@ -15,7 +15,6 @@ The quantum full adder takes two decimal numbers as input, converts them to bina
 
 
 ## Installation
-!!!! May added later !!!!
 
 ### Prerequisites
 
@@ -53,7 +52,7 @@ For simple usage, you can run the addition_app.bat file, which will execute the 
 addition_app.bat
 ```
 
-### Analyzing Specified Bit Additions
+## Analyzing Specified Bit Additions
 The repository also includes a file named "Specified addition" for explicitly analyzing 2-bit, 3-bit, and 4-bit additions. You can refer to this file to see specific examples and understand how the quantum full adder handles different bit lengths.
 
 ## Memory Requirements
