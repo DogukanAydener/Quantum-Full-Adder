@@ -4,7 +4,7 @@ This repository contains a quantum full adder implemented using Qiskit. Quantum 
 
 ## Overview
 
-The quantum full adder takes two decimal numbers as input, converts them to binary, and then performs the addition using quantum circuits. The result is displayed in both binary and decimal forms. The implementation leverages the Qiskit library to create and manipulate quantum circuits and the AerSimulator for simulation.
+The quantum full adder takes two decimal numbers as input, converts them to binary, and then performs the addition using quantum circuits. The result is displayed in both binary and decimal forms. The implementation leverages the Qiskit SDK to create and manipulate quantum circuits and the AerSimulator for simulation.
 
 ## Features
 
@@ -15,25 +15,28 @@ The quantum full adder takes two decimal numbers as input, converts them to bina
 
 
 ## Installation
-!!!! May added later !!!
+!!!! May added later !!!!
 
 ### Prerequisites
 
 - Python 3.7 or higher
-- Qiskit (v.1.1.1)
+- Jupyter Notebook
+- Qiskit (v1.1.1)
+- Qiskit Aer (0.14.2)
 - Matplotlib
 
-### Install Qiskit and Matplotlib
 
-You can install the required libraries using pip:
+### Install Jupyter Notebook, Qiskit, Qiskit Aer and Matplotlib
+
+You can install the required libraries and software using pip:
 
 ```bash
-pip install qiskit matplotlib
+pip install qiskit qiskit_aer matplotlib notebook
 ```
 
 ## Usage
 
-To use the quantum full adder, you can either run the provided Python script directly or use the batch file for convenience.
+To use the quantum full adder, you can either run the provided Python script directly or use the batch file (Windows only) for convenience.
 
 ### Running the Python Script
 Run the script using Python:
@@ -42,7 +45,7 @@ Run the script using Python:
 python Addition.py
 ```
 
-### Running with the Batch File
+### Running with the Batch File (Windows only)
 
 For simple usage, you can run the addition_app.bat file, which will execute the Addition.py script:
 
