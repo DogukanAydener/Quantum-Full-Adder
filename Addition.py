@@ -43,7 +43,8 @@ while True:
     print(f"Calculation: \n {decimal1} + {decimal2}")
     print(f"Binary calculation: \n {x} + {y} ")
 
-
+    print("")
+    print("")
 
     # Qubit number(n) selection
 
