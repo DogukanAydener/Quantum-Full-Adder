@@ -6,7 +6,7 @@ from qiskit.visualization import plot_histogram
 from IPython.display import display
 import matplotlib.pyplot as plt
 import os
-import time
+import msvcrt
 
 
 
@@ -161,7 +161,8 @@ while True:
     print(f"Result in terms of binary;\n {x} + {y} = {binary_number}")
     print("")
     print(f"Result in decimal; \n {decimal1} + {decimal2} = {decimal_value}")
-    time.sleep(5)
+    print("Press any key to continue...")
+    msvcrt.getch()
     os.system('cls')
 
 
