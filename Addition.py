@@ -12,7 +12,7 @@ import msvcrt
 
 
 while True:
-    print("##########  Addition Calculator  ##########")
+    print("##########  Quantum Full Adder  ##########")
     print("")
     print("")
     print("Enter the decimal values you want to add;")
