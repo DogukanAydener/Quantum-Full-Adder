@@ -152,9 +152,6 @@ while True:
     # Convert the binary number to a decimal value
     decimal_value = binary_to_decimal(binary_number)
 
-    # Print the decimal value
-    #print(f"Decimal value of binary {binary_number} is: {decimal_value}")
-
     print("")
     print("")
 
@@ -164,6 +161,3 @@ while True:
     print("Press any key to continue...")
     msvcrt.getch()
     os.system('cls')
-
-
-
